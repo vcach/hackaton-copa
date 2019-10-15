@@ -44,4 +44,4 @@ Puntos opcionales distribuidos de la siguiente manera:
 
 # Ejemplo Arquitectura de Referencia
 
-
+![Arquitectura](ExampleWebAppArch.jpg)
