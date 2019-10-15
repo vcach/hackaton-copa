@@ -41,3 +41,7 @@ Puntos opcionales distribuidos de la siguiente manera:
 - Infraestructura como Código - **150 puntos**
 - EC2 fleet, instancias tipo Spot - **125 puntos**
 - Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS) - **175 puntos**
+
+# Ejemplo Arquitectura de Referencia
+
+
