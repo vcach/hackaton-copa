@@ -12,7 +12,7 @@ Construir una arquitectura para la aplicación antes mencionada, a la cual se br
 
 # Puntuación Base:
 
-1500 puntos opcionales distribuidos de la siguiente manera:
+Puntos opcionales distribuidos de la siguiente manera:
 
 - Construir la arquitectura desde cero - **150 puntos**
     - EC2: servidor web + base de datos + almacenamiento
@@ -32,3 +32,12 @@ Construir una arquitectura para la aplicación antes mencionada, a la cual se br
     - Cloud9 - **100 puntos**
     - System Manager - **150 puntos**
 - Cualquier característica adicional - **50 puntos**
+
+# Retos adicionales (800 puntos que se irían agregando):
+
+- Automatizar cambios en el App - **125 puntos**
+- Replicación multiregión - **125 puntos**
+- Automatizar el parchado, respaldo de almacenamiento, gestión de los recursos - **100 puntos**
+- Infraestructura como Código - **150 puntos**
+- EC2 fleet, instancias tipo Spot - **125 puntos**
+- Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS) - **175 puntos**
