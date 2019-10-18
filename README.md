@@ -44,6 +44,7 @@ Puntos opcionales distribuidos de la siguiente manera:
 - EC2 fleet, instancias tipo Spot - **125 puntos**
 - Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS, TrustedAdvisor) - **175 puntos**
 
+
 # Dashboard para visualizar puntaje de cada equipo en tiempo real:
 
 https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
