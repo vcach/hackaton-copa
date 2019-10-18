@@ -1,0 +1,113 @@
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #bfebff;
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black no-repeat center center scroll;
+  }
+  header video {
+    display: none;
+  }
+}
+
+.thead-primary {
+  background-color: #377594;
+  color: #fff;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #f1f1f1
+}
+
+.pagination .active {
+  background-color: #377594;
+  color: #fff;
+}
+
+.calulate-distance-form {
+  border: 0.5px solid #37515d87;
+  box-shadow: 5px 5px 3px #ccd4d0;
+  border-radius: 2px;
+  padding: 10px 0px 10px 0px;
+  margin: auto;
+  width: 60%;
+}
+
+hr {
+  height: 2px;
+  background-color: #e5e9e7;
+}
+
+h3 {
+  color: #0E4A81;
+}
+
+#distanceForm {
+  margin-top: 10px;
+}
+
+.form-input {
+  text-transform: uppercase;
+  height: 38px;
+  padding: 6px 6px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.card-custom {
+  margin: 5px 10px;
+}

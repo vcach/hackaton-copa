@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IATA Distance Calculator</title>
+
+    <!-- Includes the external Bootstrap CSS library into the html -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Adding a customized CSS styling from the customStyleSheet.css file -->
+    <link rel="stylesheet" href="customStyleSheet.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="mockdata/airports.js"></script>
+    <script type="text/javascript" src="mockdata/distance.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="overlay"></div>
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <!-- Here is the video header source -->
+        <source src="media/copa_puntuality.mp4" type="video/mp4" />
+      </video>
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-2">Greetings Players</h1>
+            <h4 class="display-0">Welcome to COPA AWS Hackathon</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Here is the main Section of the WebPage -->
+  <section>
+    <div class="card text-center">
+      <div class="card-body">
+        <br />
+
+        <h3>Airport Descriptions</h3>
+
+        <br />
+
+        <table class="table table-hover">
+          <thead class="thead-primary">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">IATA</th>
+              <th scope="col">Airport</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody id="bodytableAirport"></tbody>
+        </table>
+        <div id="paginationBox" class="pagination"></div>
+
+        <br />
+        <br />
+        <br />
+        <!-- Calculation Distance -->
+        <div class="calulate-distance-form">
+          <H3>Calculate Distance</H3>
+          <div class="form-group">
+            <form id="distanceForm">
+              <input class="form-input" type="text" id="origin" name="name" placeholder="Origin IATA" />
+              &nbsp;
+              <input class="form-input" type="text" id="destination" name="name" placeholder="Destination IATA" />
+              &nbsp;
+              <input type="submit" id="calculate-distance" name="calculate-distance" class="btn btn-info"
+                value="Calculate" />
+            </form>
+          </div>
+
+          <!-- Result -->
+          <div class="card card-custom">
+            <span id="cardDistanceResult" class="alert-info">
+              <div id="distanceResult" class="card-body">
+                In order to calculate the distance from one Airport to
+                another, just write the Origin IATA airport and the
+                destination IATA Airport above.
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class=""  src="media/belize.jpg" alt="First slide" height="600" width="1425" >
+              </div>
+              <div class="carousel-item">
+                <img class="" src="media/salvador.jpg" alt="Second slide" height="600" width="1425">
+              </div>
+              <div class="carousel-item">
+                <img class=""  src="media/surinam.jpg" alt="Third slide" height="600" width="1425">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  $(document).ready(function () {
+    getAirportsAjax();
+    getAirportsDistances();
+  });
+
+  function getAirportsAjax() {
+    var productsApi =
+      "https://8a592p6z93.execute-api.us-east-1.amazonaws.com/prod/mocks/airports";
+
+    $.ajax({
+      url: productsApi,
+      async: false,
+      type: "GET",
+      responseType: "application/json",
+      success: function (response) {
+        airportList = response["airportList"];
+        setPagination();
+        fillTableAirport();
+      },
+      error: function (response) {
+        console.log("could not retrieve product list: " + response);
+        getAirportsLocal();
+      }
+    });
+  }
+
+  function getAirportsLocal() {
+    airportList = airports;
+    setPagination();
+    fillTableAirport();
+  }
+
+  function setPagination() {
+    sliceAirportList();
+    createItemPagination();
+    setStyleSelectItemPagination();
+  }
+
+  function createItemPagination() {
+    pagination.cantPage =
+      Math.round(airportList.length / pagination.cantItemPage) + 1;
+    var paginationItems = "";
+    for (let index = 0; index < pagination.cantPage; index++) {
+      var page = index + 1;
+      var classActive = "";
+      if (index == 0) classActive = "active";
+
+      paginationItems += `<a class="pagitem ${classActive}" href="javascript:void(0)" onclick="selectCurrentPagePagination(${index})">${page}</a>`;
+    }
+    $("#paginationBox").html(paginationItems);
+  }
+
+  function setStyleSelectItemPagination() {
+    var header = document.getElementById("paginationBox");
+    var btns = header.getElementsByClassName("pagitem");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  }
+
+  function sliceAirportList() {
+    var startItem = pagination.currentPage;
+    if (startItem > 0)
+      startItem += (pagination.cantItemPage - 1) * pagination.currentPage;
+
+    var endItem = startItem + pagination.cantItemPage;
+    airportListFiltered = airportList.slice(startItem, endItem);
+  }
+
+  function fillTableAirport() {
+    var rowsTableAirport;
+    $.each(airportListFiltered, function (key, value) {
+      rowsTableAirport += `<tr><td scope="row">${key + 1}</td><td>${
+        value.IATA
+        }</td><td>${value.Airport}</td><td>${value.Location}</td></tr>`;
+    });
+    $("#bodytableAirport").html(rowsTableAirport);
+  }
+
+  function selectCurrentPagePagination(pageSelected) {
+    pagination.currentPage = pageSelected;
+    sliceAirportList();
+    fillTableAirport();
+  }
+
+  $(document).on("click", "#calculate-distance", function (event) {
+    event.preventDefault();
+
+    //Reading User Input data
+    //.trim() removes empty spaces around the string, e.g. " PTY  " becomes "PTY"
+    //.toUpperCase() sets all characters in the string to to capital letters, e.g. "pty" becomes "PTY"
+    var origin = document
+      .getElementById("origin")
+      .value.trim()
+      .toUpperCase();
+    var destination = document
+      .getElementById("destination")
+      .value.trim()
+      .toUpperCase();
+
+    //Creating a variable to hold our future calculated result
+    var distanceResult = "";
+
+    //Validating our user inputs so that they are not null, empty or nonexistent distance values
+    if (
+      (origin != null) &
+      (origin !== "") &
+      (destination != null) &
+      (destination !== "") &
+      (distanceAirports != null)
+    ) {
+      var resultText = "";
+      var classResultText = "alert-info";
+
+      if (origin == destination) {
+        resultText = `The distance from ${origin} to ${destination} is 0 miles`;
+        classResultText = "alert-warning";
+      } else {
+        distanceResult = calculateAirportToAirportDistance(
+          origin,
+          destination
+        );
+        if (distanceResult > 0) {
+          resultText = `The distance from ${origin} to ${destination} is ${distanceResult} miles`;
+          classResultText = "alert-success";
+        } else {
+          resultText = `No distance information has been found for:\n   Origin: ${origin} \n   Destination: ${destination}`;
+          classResultText = "alert-danger";
+        }
+      }
+
+      //update result text displayed to users:
+      $("#cardDistanceResult").removeClass();
+      $("#cardDistanceResult").addClass(classResultText);
+      $("#distanceResult").text(resultText);
+    } else {
+      alert(
+        "Please introduce some valid information for both origin and destination"
+      );
+    }
+  });
+
+  /*
+  Get airports distance information
+*/
+  function getAirportsDistances() {
+    var productsApi =
+      "https://8a592p6z93.execute-api.us-east-1.amazonaws.com/prod/mocks/distances";
+
+    $.ajax({
+      url: productsApi,
+      async: false,
+      type: "GET",
+      responseType: "application/json",
+      success: function (response) {
+        distanceAirports = response;
+      },
+      error: function (response) {
+        console.log("could not retrieve product distance list: " + response);
+        getAirportsDistancesLocal();
+      }
+    });
+  }
+
+  function getAirportsDistancesLocal() {
+    distanceAirports = distance;
+  }
+
+  /*
+  Calculates the distance from an origin IATA Airport to another destination IATA airport
+*/
+  function calculateAirportToAirportDistance(origin, destination) {
+    if (distanceAirports != null) {
+      var result = distanceAirports.distanceList.filter(
+        f => f.ORIG_CD == origin && f.DEST_CD == destination
+      );
+      if (result.length == 0) {
+        return -1;
+      } else {
+        return result[0].MILES;
+      }
+    } else {
+      alert(
+        `No distance information has been found for:\n   Origin: ${origin} \n   Destination: ${destination}`
+      );
+    }
+  }
+  
+  var airportList = [];
+  var airportListFiltered = [];  
+  var distanceAirports;
+
+  var pagination = {
+    cantPage: 0,
+    currentPage: 0,
+    cantItemPage: 5
+  };
+</script>
+
+</html>
