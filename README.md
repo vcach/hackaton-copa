@@ -16,7 +16,7 @@ Puntos opcionales distribuidos de la siguiente manera:
 
 - Construir la arquitectura desde cero
     - EC2: servidor web + base de datos + almacenamiento
-    - **Publicar aplicación y registrar el endpoint (url, ip publica, dns, etc) en el siguiente documento:
+    - **Publicar aplicación y registrar el endpoint (url, ip publica, dns, etc) en el siguiente documento:**
     http://bit.ly/copaendpoints **150 puntos**
 - Múltiples zonas de disponibilidad para el servidor web - **100 puntos**
 - Múltiples zonas de disponibilidad para la aplicación web - **100 puntos**
@@ -44,7 +44,7 @@ Puntos opcionales distribuidos de la siguiente manera:
 - EC2 fleet, instancias tipo Spot - **125 puntos**
 - Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS, TrustedAdvisor) - **175 puntos**
 
-# Dashboard para visualizar puntaje:
+# Dashboard para visualizar puntaje de cada equipo en tiempo real:
 
 https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
 
