@@ -14,9 +14,10 @@ Construir una arquitectura para la aplicación antes mencionada, a la cual se br
 
 Puntos opcionales distribuidos de la siguiente manera:
 
-- Construir la arquitectura desde cero - **150 puntos**
+- Construir la arquitectura desde cero
     - EC2: servidor web + base de datos + almacenamiento
-- **Publicar aplicación y registrar el endpoint (url, ip publica, dns, etc) en el siguiente documento:  http://bit.ly/copaendpoints **100 puntos**
+    - **Publicar aplicación y registrar el endpoint (url, ip publica, dns, etc) en el siguiente documento:
+    http://bit.ly/copaendpoints **150 puntos**
 - Múltiples zonas de disponibilidad para el servidor web - **100 puntos**
 - Múltiples zonas de disponibilidad para la aplicación web - **100 puntos**
 - Múltiples zonas de disponibilidad para los datos - **100 puntos** (base de datos). Puede ser RDS o se puede crear otra instancia EC2.
@@ -42,6 +43,21 @@ Puntos opcionales distribuidos de la siguiente manera:
 - Infraestructura como Código - **150 puntos**
 - EC2 fleet, instancias tipo Spot - **125 puntos**
 - Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS, TrustedAdvisor) - **175 puntos**
+
+# Dashboard para visualizar puntaje:
+
+https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
+
+# Ingreso a cuenta de AWS:
+
+1. Ingresar a la siguiente URL y obtener código de acceso (hash) ingresando el nombre del equipo en **minusculas**:
+
+2. Ingresar a la siguiente URL con el código (hash) obtenido en el punto anterior:
+
+https://dashboard.eventengine.run/login
+
+3. Click en Open Console para ingresar a la consola de la cuenta de AWS
+
 
 # Ejemplo Arquitectura de Referencia
 
