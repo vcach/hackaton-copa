@@ -23,8 +23,8 @@ Puntos opcionales distribuidos de la siguiente manera:
 - VPC: Subredes públicas y privadas, enrutamiento de trafico, Nat gateways - **100 puntos**
 - Balanceo de carga - **100 puntos** (Por cada balanceador)
 - Grupo de autoescalamiento - **150 puntos** (Por cada grupo de autoescalamiento)
-- S3 - **100 puntos** (Por cada bucket. Respaldo u almacenamiento de objetos)
-- Grupos de seguridad - **50 puntos** (Por cada grupo de seguridad)
+- S3 - **100 puntos** (Por cada bucket usado correctamente y que forme parte integra de la arquitectura de la App - Respaldo u almacenamiento de objetos)
+- Grupos de seguridad - **50 puntos** (Por cada grupo de seguridad usado correctamente y que forme parte integra de la arquitectura de la App)
 - Monitoreo de la aplicación a través de CloudWatch para tomar acciones - **50 puntos**
 - IAM - **100 puntos** - Usuarios y roles definidos
 - CDN - **50 puntos**
@@ -41,7 +41,7 @@ Puntos opcionales distribuidos de la siguiente manera:
 - Automatizar el parchado, respaldo de almacenamiento, gestión de los recursos - **100 puntos**
 - Infraestructura como Código - **150 puntos**
 - EC2 fleet, instancias tipo Spot - **125 puntos**
-- Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS) - **175 puntos**
+- Controles de seguridad (CloudTrail, GuardDuty, WAF, Config, KMS, TrustedAdvisor) - **175 puntos**
 
 # Ejemplo Arquitectura de Referencia
 
