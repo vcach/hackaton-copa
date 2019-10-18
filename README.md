@@ -16,6 +16,7 @@ Puntos opcionales distribuidos de la siguiente manera:
 
 - Construir la arquitectura desde cero - **150 puntos**
     - EC2: servidor web + base de datos + almacenamiento
+- **Publicar aplicación y registrar el endpoint (url, ip publica, dns, etc) en el siguiente documento:  http://bit.ly/copaendpoints **100 puntos**
 - Múltiples zonas de disponibilidad para el servidor web - **100 puntos**
 - Múltiples zonas de disponibilidad para la aplicación web - **100 puntos**
 - Múltiples zonas de disponibilidad para los datos - **100 puntos** (base de datos). Puede ser RDS o se puede crear otra instancia EC2.
