@@ -35,7 +35,7 @@ Puntos opcionales distribuidos de la siguiente manera:
     - System Manager - **150 puntos**
 - Cualquier característica adicional - **50 puntos**
 
-# Retos adicionales (800 puntos que se irían agregando):
+# Retos adicionales opcionales (800 puntos que se irían agregando):
 
 - Automatizar cambios en el App - **125 puntos**
 - Replicación multiregión - **125 puntos**
