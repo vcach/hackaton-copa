@@ -53,9 +53,11 @@ https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
 
 1. Ingresar a la siguiente URL y obtener código de acceso (hash) ingresando el nombre del equipo en **MINUSCULAS Y SIN ESPACIOS**:
 
+    https://bit.ly/2Brxala
+
 2. Ingresar a la siguiente URL con el código (hash) obtenido en el punto anterior:
 
-https://dashboard.eventengine.run/login
+    https://dashboard.eventengine.run/login
 
 3. Click en Open Console para ingresar a la consola de la cuenta de AWS
 
