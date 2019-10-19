@@ -22,7 +22,7 @@ Airport.getAllAirport = function(result) {
     } else {
       console.log('Airports : ', res);
 
-      result(null, res);
+      result(null, {airports :res});
     }
   });
 };
@@ -46,7 +46,7 @@ Distance.getAllDistance = function(req, result) {
     } else {
       console.log('Distance : ', res);
 
-      result(null, res);
+      result(null, {distance: {distanceList: res}});
     }
   });
 };

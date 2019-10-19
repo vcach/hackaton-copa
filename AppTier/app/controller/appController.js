@@ -8,7 +8,7 @@ exports.list_all_Airports = function(req, res) {
     console.log('controller');
     if (err) res.send(err);
     console.log('res', Airport);
-    res.send(Airport);
+    res.json(Airport);
   });
 };
 
@@ -17,7 +17,7 @@ exports.list_all_Distances = function(req, res) {
     console.log('controller');
     if (err) res.send(err);
     console.log('res', Distance);
-    res.send(Distance);
+    res.json(Distance);
   });
 };
 

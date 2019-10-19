@@ -6,9 +6,9 @@ var port = 3000;
 const mysql = require('mysql');
 // connection configurations
 const mc = mysql.createConnection({
-  host: 'datasetcopa.c9koanxhmgic.us-east-2.rds.amazonaws.com',
-  user: 'admin',
-  password: 'passw0rd',
+  host: 'localhost',
+  user: 'copadbadmin',
+  password: 'copadb2020',
   database: 'copaDataSet'
 });
 
