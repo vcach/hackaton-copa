@@ -85,15 +85,15 @@ https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
 
    Capa Web (FrontEnd)
         
-        [Web Tier Folder](WebTier)
+   [Web Tier Folder](WebTier/)
         
    Capa Lógica (BackEnd)
     
-        [App Tier Folder](AppTier)
+   [App Tier Folder](AppTier/)
         
    Capa de Datos
     
-        [Sample Data Folder](sampledata)
+   [Sample Data Folder](sampledata/)
 
 # Ejemplo Arquitectura de Referencia
 
