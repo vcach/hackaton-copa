@@ -38,7 +38,6 @@ Puntos opcionales distribuidos de la siguiente manera:
 # Retos adicionales opcionales (800 puntos que se irían agregando):
 
 - Automatizar cambios en el App - **125 puntos**
-- Replicación multiregión - **125 puntos**
 - Automatizar el parchado, respaldo de almacenamiento, gestión de los recursos - **100 puntos**
 - Infraestructura como Código - **150 puntos**
 - EC2 fleet, instancias tipo Spot - **125 puntos**
