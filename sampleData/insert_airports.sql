@@ -1,3 +1,11 @@
+use copaDataSet
+DROP TABLE IF EXISTS `aeropuertos`;
+CREATE TABLE `aeropuertos` (
+  `IATA` varchar(45) NOT NULL,
+  `Airport` varchar(45) DEFAULT NULL,
+  `Location` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`IATA`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 insert into aeropuertos values ("AAA","Anaa Airport","Anaa, Tuamotus, French Polynesia");
 insert into aeropuertos values ("AAB","Arrabury Airport","Arrabury, Queensland, Australia");
 insert into aeropuertos values ("AAC","El Arish International Airport","El Arish, Egypt");
