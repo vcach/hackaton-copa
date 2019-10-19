@@ -286,8 +286,8 @@
   Get airports distance information
 */
   function getAirportsDistances() {
-    var productsApi =
-      "https://8a592p6z93.execute-api.us-east-1.amazonaws.com/prod/mocks/distances";
+    //var productsApi = "https://8a592p6z93.execute-api.us-east-1.amazonaws.com/prod/mocks/distances";
+    var productsApi = "http://52.90.245.88:3000/distances"
 
     $.ajax({
       url: productsApi,
@@ -295,6 +295,7 @@
       type: "GET",
       responseType: "application/json",
       success: function (response) {
+        console.log("response:", response)
         distanceAirports = response;
       },
       error: function (response) {
@@ -312,8 +313,9 @@
   Calculates the distance from an origin IATA Airport to another destination IATA airport
 */
   function calculateAirportToAirportDistance(origin, destination) {
+    console.log("distanceAirports:", distanceAirports.distance.distanceList);
     if (distanceAirports != null) {
-      var result = distanceAirports.distanceList.filter(
+      var result = distanceAirports.distance.distanceList.filter(
         f => f.ORIG_CD == origin && f.DEST_CD == destination
       );
       if (result.length == 0) {
