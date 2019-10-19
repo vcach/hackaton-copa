@@ -2,11 +2,12 @@
 
 var mysql = require('mysql');
 
+//grant all privileges on copaDataSet.* to admin@'%' identified by 'copadb2020';
 //local mysql db connection
 var connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'root',
-    password : '',
+    user     : 'copadbadmin',
+    password : 'copadb2020',
     database : 'copaDataSet'
 });
 
