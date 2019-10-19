@@ -1,5 +1,5 @@
 use copaDataSet;
-CREATE TABLE `copaDataSet`.`new_table` (
+CREATE TABLE `copaDataSet`.`aeropuertos` (
   `IATA` VARCHAR(45) NOT NULL,
   `Airport` VARCHAR(45) NULL,
   `Location` VARCHAR(45) NULL,
