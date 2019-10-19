@@ -83,15 +83,15 @@ https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
        
 # Código y Recursos de la Aplicación
 
-   Capa Web (FrontEnd)
+   **Capa Web (FrontEnd)**
         
    [Web Tier Folder](WebTier/)
         
-   Capa Lógica (BackEnd)
+   **Capa Lógica (BackEnd)**
     
    [App Tier Folder](AppTier/)
         
-   Capa de Datos
+   **Capa de Datos**
     
    [Sample Data Folder](sampledata/)
 
