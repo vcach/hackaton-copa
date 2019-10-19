@@ -81,6 +81,20 @@ https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
        En esta ventana tambien encontraran los Keys para acceder de manera programatica (aws cli, sdk, etc)
        
        
+# Código y Recursos de la Aplicación
+
+    - Capa Web (FrontEnd)
+        
+        WebTier Folder
+        
+    - Capa Lógica (BackEnd)
+    
+        AppTier Folder
+        
+    - Capa de Datos
+    
+        SampleData Folder
+        
 
 # Ejemplo Arquitectura de Referencia
 
