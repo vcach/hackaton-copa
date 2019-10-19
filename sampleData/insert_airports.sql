@@ -877,7 +877,7 @@ insert into aeropuertos values ("BNY","Bellona/Anua Airport","Bellona Island, Re
 insert into aeropuertos values ("BNZ","Banz Airport","Banz, Papua New Guinea");
 insert into aeropuertos values ("BOA","Boma Airport","Boma, Democratic Republic of the Congo");
 insert into aeropuertos values ("BOB","Bora Bora Airport (Motu Mute Airport)","Bora Bora, French Polynesia");
-insert into aeropuertos values ("BOC","Bocas del Toro "Isla ColÛn" International Airport","Bocas Town, Panama");
+insert into aeropuertos values ("BOC","Bocas del Toro \"Isla ColÛn\" International Airport","Bocas Town, Panama");
 insert into aeropuertos values ("BOD","BordeauxñMÈrignac Airport","Bordeaux, Aquitaine, France");
 insert into aeropuertos values ("BOE","Boundji Airport","Boundji, Republic of the Congo");
 insert into aeropuertos values ("BOG","El Dorado International Airport","Bogot·, Colombia");
