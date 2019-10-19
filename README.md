@@ -54,6 +54,8 @@ https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
 1. Ingresar a la siguiente URL y obtener código de acceso (hash) ingresando el nombre del equipo en **MINUSCULAS Y SIN ESPACIOS**:
 
     https://bit.ly/2Brxala
+    
+    ![Codigo](/assets/Codigo.png)
 
 2. Ingresar a la siguiente URL con el código (hash) obtenido en el punto anterior:
 
