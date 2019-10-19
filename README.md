@@ -61,14 +61,18 @@ https://1drv.ms/x/s!AtbD8KizBhftqLx0j05H6XlCFOMERw
     
     
     - Click en "Set Team Name"
+    
     ![EventEngine1](/assets/EventEngine1.png)
     
     
     - Setear nombre del equipo igual al nombre provisto en el registro
+    
      ![EventEngine2](/assets/EventEngine2.png)
      
      
-    - Click en "AWS Console". En la ventana que se abre dar click en "Open Console" para abrir la consola de AWS
+    - Click en "AWS Console"
+      En la ventana que se abre dar click en "Open Console" para abrir la consola de AWS
+      
       ![EventEngine3](/assets/EventEngine3.png)
       
        En esta ventana tambien encontraran los Keys para acceder de manera programatica (aws cli, sdk, etc)
