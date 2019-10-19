@@ -1,18 +1,17 @@
 const express = require('express'),
   app = express(),
   bodyParser = require('body-parser');
-  var port = 3000;
-
+var port = 3000;
 
 const mysql = require('mysql');
 // connection configurations
 const mc = mysql.createConnection({
-    host: 'localhost',
-    user: 'copadbadmin',
-    password: 'copadb2020',
-    database: 'copaDataSet'
+  host: 'datasetcopa.c9koanxhmgic.us-east-2.rds.amazonaws.com',
+  user: 'admin',
+  password: 'passw0rd',
+  database: 'copaDataSet'
 });
- 
+
 // connect to database
 mc.connect();
 
