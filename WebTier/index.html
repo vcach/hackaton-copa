@@ -140,8 +140,9 @@
   });
 
   function getAirportsAjax() {
-    var productsApi =
-      "https://8a592p6z93.execute-api.us-east-1.amazonaws.com/prod/mocks/airports";
+    //var productsApi =
+      //"https://8a592p6z93.execute-api.us-east-1.amazonaws.com/prod/mocks/airports";
+      var productsApi = "http://52.90.245.88:3000/airports";
 
     $.ajax({
       url: productsApi,
@@ -149,7 +150,8 @@
       type: "GET",
       responseType: "application/json",
       success: function (response) {
-        airportList = response["airportList"];
+        console.log("response:", response);
+        airportList = response.airports;
         setPagination();
         fillTableAirport();
       },
