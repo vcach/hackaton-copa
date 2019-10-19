@@ -7,32 +7,13 @@ var Airport = function(Airport){
     this.status = Airport.status;
     this.created_at = new Date();
 };
-/* Airport.createAirport = function (newAirport, result) {    
-        sql.query("INSERT INTO Airports set ?", newAirport, function (err, res) {
-                
-                if(err) {
-                    console.log("error: ", err);
-                    result(err, null);
-                }
-                else{
-                    console.log(res.insertId);
-                    result(null, res.insertId);
-                }
-            });           
+
+var Distance = function(Distance){
+    this.Distance = Distance.Distance;
+    this.status = Distance.status;
+    this.created_at = new Date();
 };
-Airport.getAirportById = function (AirportId, result) {
-        sql.query("Select Airport from Airports where id = ? ", AirportId, function (err, res) {             
-                if(err) {
-                    console.log("error: ", err);
-                    result(err, null);
-                }
-                else{
-                    result(null, res);
-              
-                }
-            });   
-};
-*/
+
 Airport.getAllAirport = function (result) {
         sql.query("Select * from aeropuertos", function (err, res) {
 
@@ -47,29 +28,20 @@ Airport.getAllAirport = function (result) {
                 }
             });   
 };
-/*Airport.updateById = function(id, Airport, result){
-  sql.query("UPDATE Airports SET Airport = ? WHERE id = ?", [Airport.Airport, id], function (err, res) {
-          if(err) {
-              console.log("error: ", err);
-                result(null, err);
-             }
-           else{   
-             result(null, res);
-                }
-            }); 
-};
-Airport.remove = function(id, result){
-     sql.query("DELETE FROM Airports WHERE id = ?", [id], function (err, res) {
+
+Distance.getAllDistance = function (result) {
+        sql.query("Select * from distancias", function (err, res) {
 
                 if(err) {
                     console.log("error: ", err);
                     result(null, err);
                 }
                 else{
-               
+                  console.log('Distance : ', res);  
+
                  result(null, res);
                 }
-            }); 
+            });   
 };
-*/
-module.exports= Airport;
+module.exports.Airport = Airport;
+module.exports.Distance = Distance;

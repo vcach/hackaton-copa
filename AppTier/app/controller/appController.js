@@ -1,6 +1,7 @@
 'use strict';
 
-var Airport = require('../models/appModel.js');
+var Airport = require('../models/appModel.js').Airport;
+var Distance = require('../models/appModel.js').Distance;
 
 exports.list_all_Airports = function(req, res) {
   Airport.getAllAirport(function(err, Airport) {
@@ -13,6 +14,16 @@ exports.list_all_Airports = function(req, res) {
   });
 };
 
+exports.list_all_Distances = function(req, res) {
+  Distance.getAllDistance(function(err, Distance) {
+
+    console.log('controller')
+    if (err)
+      res.send(err);
+      console.log('res', Distance);
+    res.send(Distance);
+  });
+};
 
 /*
 exports.create_a_Airport = function(req, res) {
