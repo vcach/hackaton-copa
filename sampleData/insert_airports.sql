@@ -1,9 +1,3 @@
-use copaDataSet;
-CREATE TABLE `copaDataSet`.`aeropuertos` (
-  `IATA` VARCHAR(45) NOT NULL,
-  `Airport` VARCHAR(45) NULL,
-  `Location` VARCHAR(45) NULL,
-  PRIMARY KEY (`IATA`));
 insert into aeropuertos values ("AAA","Anaa Airport","Anaa, Tuamotus, French Polynesia");
 insert into aeropuertos values ("AAB","Arrabury Airport","Arrabury, Queensland, Australia");
 insert into aeropuertos values ("AAC","El Arish International Airport","El Arish, Egypt");
@@ -1311,13 +1305,13 @@ insert into aeropuertos values ("CHM","Tnte. FAP Jaime Montreuil Morales Airport
 insert into aeropuertos values ("CHN","Jeonju Airport","Jeonju, South Korea");
 insert into aeropuertos values ("CHO","CharlottesvilleñAlbemarle Airport","Charlottesville, Virginia, United States");
 insert into aeropuertos values ("CHP","Circle Hot Springs Airport","Circle Hot Springs, Alaska, United States");
-insert into aeropuertos values ("CHQ","Chania International Airport ("Ioannis Daskalogiannis")","Chania, Greece");
-insert into aeropuertos values ("CHR","Ch‚teauroux-Centre "Marcel Dassault" Airport","Ch‚teauroux, Centre-Val de Loire, France");
+insert into aeropuertos values ("CHQ","Chania International Airport (\"Ioannis Daskalogiannis\")","Chania, Greece");
+insert into aeropuertos values ("CHR","Ch‚teauroux-Centre \"Marcel Dassault\" Airport","Ch‚teauroux, Centre-Val de Loire, France");
 insert into aeropuertos values ("CHS","Charleston International Airport / Charleston Air Force Base","Charleston, South Carolina, United States");
 insert into aeropuertos values ("CHT","Chatham Islands / Tuuta Airport","Chatham Islands, New Zealand");
 insert into aeropuertos values ("CHU","Chuathbaluk Airport (FAA: 9A3)","Chuathbaluk, Alaska, United States");
 insert into aeropuertos values ("CHV","Chaves Airport","Chaves, Portugal");
-insert into aeropuertos values ("CHX","Changuinola "Capit·n Manuel NiÒo" International Airport","Changuinola, Panama");
+insert into aeropuertos values ("CHX","Changuinola \"Capit·n Manuel NiÒo\" International Airport","Changuinola, Panama");
 insert into aeropuertos values ("CHY","Choiseul Bay Airport","Choiseul Bay, Taro Island, Solomon Islands");
 insert into aeropuertos values ("CHZ","Chiloquin State Airport (FAA: 2S7)","Chiloquin, Oregon, United States");
 insert into aeropuertos values ("CIA","CiampinoñG. B. Pastine International Airport","Rome, Lazio, Italy");
@@ -2362,7 +2356,7 @@ insert into aeropuertos values ("FOB","Fort Bragg Airport (FAA: 82CL)","Fort Bra
 insert into aeropuertos values ("FOC","Fuzhou Changle International Airport","Fuzhou, Fujian, China");
 insert into aeropuertos values ("FOD","Fort Dodge Regional Airport","Fort Dodge, Iowa, United States");
 insert into aeropuertos values ("FOE","Topeka Regional Airport","Topeka, Kansas, United States");
-insert into aeropuertos values ("FOG","Foggia "Gino Lisa" Airport","Foggia, Apulia, Italy");
+insert into aeropuertos values ("FOG","Foggia \"Gino Lisa\" Airport","Foggia, Apulia, Italy");
 insert into aeropuertos values ("FOK","Francis S. Gabreski Airport","Westhampton Beach, New York, United States");
 insert into aeropuertos values ("FOM","Foumban Nkounja Airport","Foumban, Cameroon");
 insert into aeropuertos values ("FON","La Fortuna Airport","La Fortuna, Costa Rica");
@@ -5536,7 +5530,7 @@ insert into aeropuertos values ("OGX","Ain Beida Airport","Ouargla, Algeria");
 insert into aeropuertos values ("OGZ","Beslan Airport","Vladikavkaz, North Ossetia-Alania, Russia");
 insert into aeropuertos values ("OHA","RNZAF Base Ohakea","Bulls, New Zealand");
 insert into aeropuertos values ("OHB","Ambohibary Airport","Moramanga, Madagascar");
-insert into aeropuertos values ("OHD","Ohrid "St. Paul the Apostle" Airport","Ohrid, Republic of Macedonia");
+insert into aeropuertos values ("OHD","Ohrid \"St. Paul the Apostle\" Airport","Ohrid, Republic of Macedonia");
 insert into aeropuertos values ("OHE","Mohe Gulian Airport","Mohe, Heilongjiang, China");
 insert into aeropuertos values ("OHH","Okha Airport (Novostroyka Airport)","Okha, Sakhalin Oblast, Russia");
 insert into aeropuertos values ("OHI","Oshakati Airport","Oshakati, Namibia");
@@ -5766,7 +5760,7 @@ insert into aeropuertos values ("OZR","Cairns Army Airfield","Fort Rucker / Ozar
 insert into aeropuertos values ("OZZ","Ouarzazate Airport","Ouarzazate, Morocco");
 insert into aeropuertos values ("PAA","Hpa-An Airport","Hpa-An, Myanmar");
 insert into aeropuertos values ("PAB","Bilaspur Airport","Bilaspur, Chhattisgarh, India");
-insert into aeropuertos values ("PAC","Albrook "Marcos A. Gelabert" International Airport","Panama City, Panama");
+insert into aeropuertos values ("PAC","Albrook \"Marcos A. Gelabert\" International Airport","Panama City, Panama");
 insert into aeropuertos values ("PAD","Paderborn Lippstadt Airport","Paderborn / Lippstadt, North Rhine-Westphalia, Germany");
 insert into aeropuertos values ("PAE","Paine Field (Snohomish County Airport)","Everett, Washington, United States");
 insert into aeropuertos values ("PAF","Pakuba Airfield","Pakuba, Uganda");
@@ -6845,7 +6839,7 @@ insert into aeropuertos values ("SKL","Broadford Airfield","Isle of Skye, Scotla
 insert into aeropuertos values ("SKM","Skeldon Airport","Skeldon, Guyana");
 insert into aeropuertos values ("SKN","Stokmarknes Airport, Skagen","Stokmarknes, Norway");
 insert into aeropuertos values ("SKO","Sadiq Abubakar III International Airport","Sokoto, Nigeria");
-insert into aeropuertos values ("SKP","Skopje "Alexander the Great" Airport","Skopje, Macedonia");
+insert into aeropuertos values ("SKP","Skopje \"Alexander the Great\" Airport","Skopje, Macedonia");
 insert into aeropuertos values ("SKQ","Sekake Airport","Sekake, Lesotho");
 insert into aeropuertos values ("SKR","Shakiso Airport","Shakiso, Ethiopia");
 insert into aeropuertos values ("SKS","Vojens Airport (Skrydstrup Airport)","Vojens, Denmark");
@@ -6890,7 +6884,7 @@ insert into aeropuertos values ("SME","Lake Cumberland Regional Airport","Somers
 insert into aeropuertos values ("SMF","Sacramento International Airport","Sacramento, California, United States");
 insert into aeropuertos values ("SMG","Santa MarÌa Airport","Santa MarÌa del Mar, Peru");
 insert into aeropuertos values ("SMH","Sapmanga Airport","Sapmanga, Papua New Guinea");
-insert into aeropuertos values ("SMI","Samos International Airport "Aristarchos of Samos"","Samos, Greece");
+insert into aeropuertos values ("SMI","Samos International Airport \"Aristarchos of Samos\"","Samos, Greece");
 insert into aeropuertos values ("SMJ","Sim Airport","Sim, Papua New Guinea");
 insert into aeropuertos values ("SMK","St. Michael Airport","St. Michael, Alaska, United States");
 insert into aeropuertos values ("SML","Stella Maris Airport","Stella Maris, Long Island, Bahamas");
@@ -7212,7 +7206,7 @@ insert into aeropuertos values ("SZV","Suzhou Guangfu Airport","Suzhou, Jiangsu,
 insert into aeropuertos values ("SZW","Schwerin-Parchim International Airport","Schwerin, Mecklenburg-Vorpommern, Germany");
 insert into aeropuertos values ("SZX","Shenzhen Bao'an International Airport","Shenzhen, Guangdong, China");
 insert into aeropuertos values ("SZY","Olsztyn-Mazury Regional Airport","Szczytno / Olsztyn, Poland");
-insert into aeropuertos values ("SZZ",""Solidarity" SzczecinñGoleniÛw Airport","Szczecin, Poland");
+insert into aeropuertos values ("SZZ","\"Solidarity\" SzczecinñGoleniÛw Airport","Szczecin, Poland");
 insert into aeropuertos values ("TAA","Tarapaina Airport","Tarapaina, Solomon Islands");
 insert into aeropuertos values ("TAB","Arthur Napoleon Raymond Robinson International Airport","Tobago, Trinidad and Tobago");
 insert into aeropuertos values ("TAC","Daniel Z. Romualdez Airport","Tacloban, Philippines");
@@ -7627,7 +7621,7 @@ insert into aeropuertos values ("TTB","TortolÏ Airport (Arbatax Airport)","Tort
 insert into aeropuertos values ("TTC","Las Breas Airport","Taltal, Chile");
 insert into aeropuertos values ("TTD","PortlandñTroutdale Airport","Portland, Oregon, United States");
 insert into aeropuertos values ("TTE","Sultan Babullah Airport","Ternate, Indonesia");
-insert into aeropuertos values ("TTG","Tartagal "General Enrique Mosconi" Airport","Tartagal, Salta, Argentina");
+insert into aeropuertos values ("TTG","Tartagal \"General Enrique Mosconi\" Airport","Tartagal, Salta, Argentina");
 insert into aeropuertos values ("TTH","RAFO Thumrait","Thumrait, Oman");
 insert into aeropuertos values ("TTI","Tetiaroa Airport","Tetiaroa, Society Islands, French Polynesia");
 insert into aeropuertos values ("TTJ","Tottori Airport","Tottori, Honshu, Japan");
